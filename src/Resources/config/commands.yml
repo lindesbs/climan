@@ -5,3 +5,6 @@ services:
   lindesbs.climan.localconfig.command:
     class: lindesbs\climan\Command\CliManLocalconfigCommand
     tags: ['console.command']
+  lindesbs.climan.frontenduser.command:
+    class: lindesbs\climan\Command\CliManFrontendUserCommand
+    tags: ['console.command']

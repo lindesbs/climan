@@ -18,7 +18,8 @@
   "support": {
   },
   "require": {
-    "php": ">=7.1.0"
+    "php": ">=7.1.0",
+    "dg/mysql-dump": "^1.5"
   },
   "autoload": {
     "psr-4": {
