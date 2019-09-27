@@ -1,0 +1,7 @@
+services:
+  lindesbs.climan.maintenance.command:
+    class: lindesbs\climan\Command\CliManMaintenanceCommand
+    tags: ['console.command']
+  lindesbs.climan.localconfig.command:
+    class: lindesbs\climan\Command\CliManLocalconfigCommand
+    tags: ['console.command']
