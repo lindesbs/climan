@@ -1,0 +1,39 @@
+{
+	"name":"lindesbs/climan",
+	"description":"CLI Manager",
+	"keywords":["contao","cli"],
+	"type":"contao-bundle",
+	"homepage":"https://www.lindesbs.de",
+	"license":"LGPL-3.0-or-later",
+	"authors":[
+		{
+			"name":"Stefan Lindecke",
+			"homepage":"https://www.lindesbs.de",
+			"role":"Developer"
+		}
+	],
+	"support":{
+	},
+	"require":{
+		"php": ">=7.1.0"
+	},
+	"autoload":{
+		"files": [
+			"src/Resources/functions/functions.php",
+			"src/Resources/config/defines.php"
+		],
+        "psr-4": {
+			"lindesbs\\climan\\": "src/"
+		},
+        "exclude-from-classmap": [
+            "src/Resources/contao/config/",
+            "src/Resources/contao/dca/",
+            "src/Resources/contao/languages/",
+            "src/Resources/contao/templates/",
+            "src/Resources/Templates/"
+        ]
+	},
+	"extra": {
+		"contao-manager-plugin": "lindesbs\\climan\\ContaoManager\\Plugin"
+	}
+}
