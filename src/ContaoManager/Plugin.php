@@ -13,7 +13,7 @@ use Symfony\Component\HttpKernel\KernelInterface;
 /**
  * Plugin for the Contao Manager.
  *
- * @author Janosch Oltmanns
+ * @author Stefan Lindecke
  */
 class Plugin implements BundlePluginInterface
 {
@@ -28,14 +28,4 @@ class Plugin implements BundlePluginInterface
         ];
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    /*public function getRouteCollection(LoaderResolverInterface $resolver, KernelInterface $kernel)
-    {
-        return $resolver
-            ->resolve(__DIR__.'/../Resources/config/routing.yml')
-            ->load(__DIR__.'/../Resources/config/routing.yml')
-        ;
-    }*/
 }
