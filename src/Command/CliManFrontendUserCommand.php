@@ -2,6 +2,7 @@
 
 namespace lindesbs\climan\Command;
 
+use Contao\System;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
@@ -75,12 +76,6 @@ class CliManFrontendUserCommand extends Command
             {
                 $objFeUser->disable = 0;
                 $objFeUser->save();
-
-
-                $objDB = \Database::getInstance();
-
-                $dump = new \MySQLDump($objDB);
-                $dump->save(TL_ROOT . '/export.sql');
 
                 return;
             }

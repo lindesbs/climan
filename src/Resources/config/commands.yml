@@ -8,3 +8,6 @@ services:
   lindesbs.climan.frontenduser.command:
     class: lindesbs\climan\Command\CliManFrontendUserCommand
     tags: ['console.command']
+  lindesbs.climan.db.command:
+    class: lindesbs\climan\Command\CliManDBCommand
+    tags: ['console.command']
