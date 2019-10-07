@@ -2,6 +2,7 @@
 
 namespace lindesbs\climan\Command;
 
+
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
@@ -29,8 +30,9 @@ class CliManMaintenanceCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
+        $rootDir = \Contao\System::getContainer()->getParameter('kernel.project_dir');
         $filesystem = new Filesystem();
-        $strLock = TL_ROOT . '/var/maintenance_lock';
+        $strLock = $rootDir . '/var/maintenance_lock';
 
 
         $bMaintenanceLockExists = $filesystem->exists($strLock);

@@ -35,7 +35,7 @@ class CliManDBCommand extends Command
         if ($input->getArgument("generate"))
         {
 
-            $param = System::getContainer()->get('database_connection')->getParams();
+            $param = \Contao\System::getContainer()->get('database_connection')->getParams();
 
 
             $db = new \mysqli($param['host'], $param['user'], $param['password'], $param['dbname'], $param['port']);
@@ -54,7 +54,8 @@ class CliManDBCommand extends Command
                 $strFilename.=".gz";
             }
 
-            $dump->save(TL_ROOT . '/'.$strFilename);
+            $rootDir = \Contao\System::getContainer()->getParameter('kernel.project_dir');
+            $dump->save($rootDir . '/'.$strFilename);
 
             return;
         }

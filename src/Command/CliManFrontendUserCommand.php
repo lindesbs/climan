@@ -31,7 +31,7 @@ class CliManFrontendUserCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $container = \System::getContainer();
+        $container = \Contao\System::getContainer();
         $container->get('contao.framework')->initialize(true);
 
         $username = $input->getArgument("username");
